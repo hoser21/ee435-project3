@@ -16,8 +16,8 @@ input [4:0] s;
 
 wire a, b;
 
-a1 mux16_1(a, i[15:0], s[3:0]);
-a2 mux16_1(b, i[31:16], s[3:0]);
-a3 mux2_1(z, a, b, s[4]);
+mux16_1 a1(a, i[15:0], s[3:0]);
+mux16_1 a2(b, i[31:16], s[3:0]);
+mux2_1 a3(z, a, b, s[4]);
 
 endmodule

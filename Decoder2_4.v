@@ -16,17 +16,15 @@ input i1, i0, en;
 wire i1_not, i0_not;
 wire e0, e1, e2, e3;
 
-a1 not(i1_not, i1);
-a2 not(i0_not, i0);
-
-a3 and(e0, i1_not, i0_not);
-a4 and(e1, i1_not, i0);
-a5 and(e2, i1, i0_not);
-a6 and(e3, i1, i0);
-
-a7 and(d0, e0, en);
-a8 and(d1, e1, en);
-a9 and(d2, e2, en);
-a10 and(d3, e3, en);
+not a1(i1_not, i1);
+not a2(i0_not, i0);
+and a3(e0, i1_not, i0_not);
+and a4(e1, i1_not, i0);
+and a5(e2, i1, i0_not);
+and a6(e3, i1, i0);
+and a7(d0, e0, en);
+and a8(d1, e1, en);
+and a9(d2, e2, en);
+and a10(d3, e3, en);
 
 endmodule

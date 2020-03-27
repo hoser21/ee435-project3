@@ -16,8 +16,8 @@ input [2:0] s;
 
 wire a, b;
 
-a1 mux4_1(a, i[0], i[1], i[2], i[3], s[0], s[1]);
-a2 mux4_1(b, i[4], i[5], i[6], i[7], s[0], s[1]);
-a3 mux2_1(z, a, b, s[2]);
+mux4_1 a1(a, i[0], i[1], i[2], i[3], s[0], s[1]);
+mux4_1 a2(b, i[4], i[5], i[6], i[7], s[0], s[1]);
+mux2_1 a3(z, a, b, s[2]);
 
 endmodule

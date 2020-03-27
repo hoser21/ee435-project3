@@ -16,8 +16,8 @@ input [3:0] s;
 
 wire a, b;
 
-a1 mux8_1(a, i[7:0], s[2:0]);
-a2 mux8_1(b, i[15:8], s[2:0]);
-a3 mux2_1(z, a, b, s[3]);
+mux8_1 a1(a, i[7:0], s[2:0]);
+mux8_1 a2(b, i[15:8], s[2:0]);
+mux2_1 a3(z, a, b, s[3]);
 
 endmodule

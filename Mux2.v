@@ -8,12 +8,12 @@
 
 `timescale 1ns / 1ns
 
-module mux2_1 (z, i0, i1 ,s);
+module mux2_1 (z, i0, i1, s);
 
 output z;
 input i0, i1, s;
 
-a1 bufif1(z, i1, s);
-a2 bufif0(z, i0, s);
+bufif1 (z, i1, s);
+bufif0 (z, i0, s);
 
 endmodule
