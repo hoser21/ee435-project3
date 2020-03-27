@@ -1,25 +1,18 @@
 // ---------------------------------------------------------------------
-//    Module:     D Flip-Flop
+//    Module:     D Flip-Flop with enable
 //    Author:     Kevin Hoser and Alex Schendel
 //    Contact:    hoser21@up.edu and schendel21@up.edu
 //    Date:       03/26/2020
 // ---------------------------------------------------------------------
 
-module DFF(q, clk, d, reset);
+module DFF_EN(q, clk, d, reset, en);
 
-output q;
-input  d, clk, reset;
+output wire q;
+input  d, clk, reset, en;
 
-reg    q;
+wire dp;
 
-
-// always @(negedge reset or posedge clk)
-
-always @(negedge reset or posedge clk)
-
-   if (~reset)
-      q <= 1'b0;
-   else
-      q <= d;
+mux2_1 mux(dp, q, d, en);
+DFF state(q, clk, dp, reset);
 
 endmodule

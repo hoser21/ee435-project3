@@ -9,28 +9,34 @@
 
 `timescale 1ns / 1ns
 
-module test_DFF;
+module test_DFF_EN;
 
 reg       d, clk, reset, en;
 wire      q;
 
-DFF DFF1(q, clk, d, reset, en); 
+DFF_EN DFF1(q, clk, d, reset, en); 
   
 always
-  clk = 0;
-  #10 clk = 1;
-  #10
+  begin
+    clk = 0;
+    forever #10 clk = !clk;
+  end
 
 initial	// Test stimulus
   begin
-    #10  d = 0; reset =  0; en = 0;
-    #10 $stop;
+    #5 d = 0; reset = 0; en = 1;
+    #20 d = 1;
+    #20 d = 0;
+    #20 d = 0;
+    #20 d = 1;
+    #20 d = 1;
+    #10 d = 0; reset = 1;
+    #30 d = 0;
+    #20 d = 1; reset = 0;
+    #20 d = 1; en = 0;
+    #20 d = 0;
+    #20 d = 0;
+    #20 d = 1;
   end
-  
-initial
-   begin
-    $display("      time d  reset  en  clk  q "); 
-    $monitor($stime,, d,,, reset,,, en,,,,,, clk,,,,,, q); 
-   end
 
 endmodule  
