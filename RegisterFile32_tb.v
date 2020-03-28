@@ -16,7 +16,7 @@ reg [31:0] d;
 reg clk, w_en;
 reg [4:0] w_sel, a_sel, b_sel;
 
-register32 registerFile32 (a, b, clk, d, w_sel, w_en, a_sel, b_sel); 
+registerFile32 dut (a, b, clk, d, w_sel, w_en, a_sel, b_sel); 
   
 always
   begin
