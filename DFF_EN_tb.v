@@ -24,15 +24,15 @@ always
 
 initial	// Test stimulus
   begin
-    #5 d = 0; reset = 0; en = 1;
+    #5 d = 0; reset = 1; en = 1;
     #20 d = 1;
     #20 d = 0;
     #20 d = 0;
     #20 d = 1;
     #20 d = 1;
-    #10 d = 0; reset = 1;
+    #10 d = 0; reset = 0;
     #30 d = 0;
-    #20 d = 1; reset = 0;
+    #20 d = 1; reset = 1;
     #20 d = 1; en = 0;
     #20 d = 0;
     #20 d = 0;

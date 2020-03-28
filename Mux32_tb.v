@@ -11,7 +11,7 @@
 
 module test_mux32_1;
 
-reg       [31:0] i
+reg       [31:0] i;
 reg       [4:0] s;
 wire      out;
 
@@ -34,6 +34,6 @@ initial	// Test stimulus
   end
   
 initial
-    $monitor($stime,, i0,, i1,,, s,,, out); 
+    $monitor($stime,, i,, s,,, out); 
     
 endmodule  

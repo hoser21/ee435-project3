@@ -14,7 +14,7 @@ reg       clk, reset;
 reg       d;
 wire      q;
 
-D_FF dut (q, d, clk, reset);
+DFF dut (q, clk, d, reset);
 
 initial // Clock generator
   begin
