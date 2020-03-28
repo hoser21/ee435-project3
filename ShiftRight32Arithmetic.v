@@ -11,7 +11,7 @@
 module shiftRight32Arithmetic (out, a, b);
 
 output [31:0] out;
-input [31:0] a, b;
+input signed [31:0] a, b;
 
 assign out = a >>> b;
 

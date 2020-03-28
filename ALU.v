@@ -12,7 +12,7 @@ input [31:0] a, b;
 input [3:0] op;
 
 wire [31:0] add, sub, my_and, my_or, my_xor, my_xnor,
-            my_shl, my_shr, my_sra);
+            my_shl, my_shr, my_sra;
 
 full_adder_32 adder(, add, a, b, 1'b0);
 full_subtractor_32 subber(, sub, a, b, 1'b0);
@@ -25,6 +25,6 @@ shiftRight32 shiftRighter(my_shr, a, b);
 shiftRight32Arithmetic shiftRightAer(my_sra, a, b);
 
 mux16_32 muxer(out, add, sub, , , , , , ,
-                    and, or, xor, xnor, shl, shr, sra, , op);
+    my_and, my_or, my_xor, my_xnor, my_shl, my_shr, my_sra, , op);
 
 endmodule
