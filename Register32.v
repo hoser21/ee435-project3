@@ -14,6 +14,6 @@ output [31:0] q;
 input [31:0] d;
 input clk, en;
 
-DFF d1[31:0] (q, clk, d, , en);
+DFF_EN d1[31:0] (q, clk, d, , en);
 
 endmodule
