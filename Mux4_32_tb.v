@@ -15,7 +15,7 @@ wire [31:0] z;
 reg [31:0] i0, i1, i2, i3;
 reg [1:0] s;
 
-mux4_32 dut (z, i0, i1, i2, i3, s[0], s[0]);
+mux4_32 dut (z, i0, i1, i2, i3, s[0], s[1]);
 
   
 initial	// Test stimulus
