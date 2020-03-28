@@ -16,8 +16,8 @@ input [2:0] s;
 
 wire [31:0] a, b;
 
-mux4_32 a1(a, i0, i1, i2, i3, s0, s1);
-mux4_32 a2(b, i4, i5, i6, i7, s0, s1);
-mux2_32 a3(z, a, b, s2);
+mux4_32 a1(a, i0, i1, i2, i3, s[0], s[1]);
+mux4_32 a2(b, i4, i5, i6, i7, s[0], s[1]);
+mux2_32 a3(z, a, b, s[2]);
 
 endmodule
