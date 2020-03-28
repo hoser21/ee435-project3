@@ -8,7 +8,7 @@
 
 `timescale 1ns / 1ns
 
-module register32 (q, d, clk, en);
+module register32 (q, clk, d, en);
 
 output [31:0] q;
 input [31:0] d;
