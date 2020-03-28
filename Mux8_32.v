@@ -11,7 +11,7 @@
 module mux8_32 (z, i0, i1, i2, i3, i4, i5, i6, i7, s);
 
 output [31:0] z;
-input [31:0] i0, i1, i2, i3, i4, i5, i6 i7;
+input [31:0] i0, i1, i2, i3, i4, i5, i6, i7;
 input [2:0] s;
 
 wire [31:0] a, b;
