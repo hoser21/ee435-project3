@@ -15,12 +15,12 @@ input [4:0] i;
 input en;
 
 wire i4_not;
-wire [32:0] e;
+wire [31:0] e;
 
 not a1(i4_not, i[4]);
 
 decoder4_16 a2(e[15:0], i[3:0], i4_not);
-decoder4_16 a3(e[32:16], i[3:0], i[4]);
+decoder4_16 a3(e[31:16], i[3:0], i[4]);
 
 and a4(d[0], e[0], en);
 and a5(d[1], e[1], en);
